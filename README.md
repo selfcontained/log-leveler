@@ -33,3 +33,24 @@ console.log(config.level);
 ```
 
 Disabled loggers will be sorted to the lower levels, and your level will be set to the first enabled logger.
+
+
+### Example of using it with [winston](https://github.com/flatiron/winston):
+
+```javascript
+var config = leveler({
+    info: true,
+    debug: false,
+    warn: true,
+    error: true
+});
+
+app.log = new (winston.Logger)({
+	levels: config.levels,
+	transports: [
+		new (winston.transports.Console)({
+			level: config.level
+		})
+	]
+});
+```
