@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/selfcontained/winston-nolevels.git"
+    "url": "git://github.com/selfcontained/log-leveler.git"
   },
   "keywords": [
     "logger",
@@ -18,9 +18,9 @@
   "author": "Brad Harris",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/selfcontained/winston-nolevels/issues"
+    "url": "https://github.com/selfcontained/log-leveler/issues"
   },
-  "homepage": "https://github.com/selfcontained/winston-nolevels",
+  "homepage": "https://github.com/selfcontained/log-leveler",
   "devDependencies": {
     "mocha": "^1.18.2",
     "chai": "^1.9.1"
