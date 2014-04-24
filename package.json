@@ -1,0 +1,28 @@
+{
+  "name": "log-leveler",
+  "version": "0.0.0",
+  "description": "calculate log levels from a set if enabled/disabled loggers",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/selfcontained/winston-nolevels.git"
+  },
+  "keywords": [
+    "logger",
+    "log",
+    "no levels"
+  ],
+  "author": "Brad Harris",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/selfcontained/winston-nolevels/issues"
+  },
+  "homepage": "https://github.com/selfcontained/winston-nolevels",
+  "devDependencies": {
+    "mocha": "^1.18.2",
+    "chai": "^1.9.1"
+  }
+}
