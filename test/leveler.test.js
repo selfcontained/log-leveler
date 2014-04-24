@@ -22,15 +22,6 @@ describe('Winston No Levels Logger', function() {
             error: true
         });
 
-        config2 = leveler({
-            info: true,
-            debug: false,
-            warn: true,
-            error: false,
-            brad: true,
-            gecko: false
-        });
-        console.log(config2);
         assert.isObject(config.levels);
         assert.isString(config.level);
         assert.equal(config.level, 'warn');
