@@ -12,8 +12,8 @@ module.exports = function(loggers) {
 	Object.keys(loggers).forEach(function(type) {
 		if(!loggers[type]) return;
 
-		// set level to first enabled logger
-		level = level === null ? type : level;
+		// set level to last enabled logger (last one wins)
+		level = type;
 		levels[type] = Object.keys(levels).length;
 	});
 
