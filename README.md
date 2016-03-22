@@ -26,13 +26,13 @@ var config = leveler({
 });
 
 console.log(config.levels);
-// { debug: 0, error: 1, gecko: 2, info: 3, warn: 4, brad: 5 }
+// { info: 0, warn: 1, brad: 2, debug: 3, error: 4, gecko: 5 }
 
 console.log(config.level);
-// info
+// brad
 ```
 
-Disabled loggers will be sorted to the lower levels, and your level will be set to the first enabled logger.
+Enabled loggers will be sorted to the lower indexed levels, and your level will be set to the last enabled logger.
 
 
 ### Example of using it with [winston](https://github.com/flatiron/winston):
