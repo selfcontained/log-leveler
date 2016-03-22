@@ -25,7 +25,7 @@ describe('Winston No Levels Logger', function() {
         assert.isObject(config.levels);
         assert.isString(config.level);
         assert.equal(config.level, 'warn');
-        assert.deepEqual(config.levels, { info: 0, warn: 1, error: 2});
+        assert.deepEqual(config.levels, { warn: 0, error: 1, info: 2 });
     });
 
     it('should work with three loggers, all enabled', function() {
