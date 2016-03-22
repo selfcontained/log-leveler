@@ -1,6 +1,6 @@
 {
   "name": "log-leveler",
-  "version": "0.1.1",
+  "version": "2.0.0",
   "description": "calculate log levels from a set if enabled/disabled loggers",
   "main": "index.js",
   "scripts": {
