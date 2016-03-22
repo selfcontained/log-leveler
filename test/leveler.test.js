@@ -17,30 +17,30 @@ describe('Winston No Levels Logger', function() {
 
     it('should work with two loggers, one that is disabled', function() {
         var config = leveler({
-            warn: true,
+            error: true,
             info: false,
-            error: true
+            warn: true
         });
 
         assert.isObject(config.levels);
         assert.isString(config.level);
         assert.equal(config.level, 'warn');
-        assert.deepEqual(config.levels, { info: 0, warn: 1, error: 2});
+        assert.deepEqual(config.levels, { error: 0, warn: 1, info: 2 });
     });
 
-    it('should work with three loggers, all enabled', function() {
+    it('should work with all five loggers, all enabled', function() {
         var config = leveler({
+            error: true,
             warn: true,
             info: true,
-            error: true,
             api: true,
             cache: true
         });
 
         assert.isObject(config.levels);
         assert.isString(config.level);
-        assert.equal(config.level, 'warn');
-        assert.deepEqual(config.levels, { warn: 0, info: 1, error: 2, api: 3, cache: 4});
+        assert.equal(config.level, 'cache');
+        assert.deepEqual(config.levels, { error: 0, warn: 1, info: 2,  api: 3, cache: 4});
     });
 
 });

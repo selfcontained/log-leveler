@@ -8,19 +8,19 @@ module.exports = function(loggers) {
 	var level = null,
 		levels = {};
 
-	// put disabled loggers at the top
-	Object.keys(loggers).forEach(function(type) {
-		if(loggers[type]) return;
-
-		levels[type] = Object.keys(levels).length;
-	});
-
-	// append enabled loggers
+	// put enabled loggers at the top
 	Object.keys(loggers).forEach(function(type) {
 		if(!loggers[type]) return;
 
-		// set level to first enabled logger
-		level = level === null ? type : level;
+		// set level to last enabled logger (last one wins)
+		level = type;
+		levels[type] = Object.keys(levels).length;
+	});
+
+	// append disabled loggers
+	Object.keys(loggers).forEach(function(type) {
+		if(loggers[type]) return;
+
 		levels[type] = Object.keys(levels).length;
 	});
 
